@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MateriaFlux - Filamento 3D Sostenible y de Alta Calidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, rgba(30, 41, 59, 0.9), #020617), radial-gradient(ellipse at bottom, #020617, #020617);
+        }
+        .section-glow {
+            position: relative;
+        }
+        .section-glow::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 200px;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(79, 70, 229, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                 <!-- Logo Placeholder -->
+                <svg width="40" height="40" viewBox="0 0 258 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M129 258C199.981 258 258 199.981 258 129C258 58.0192 199.981 0 129 0C58.0192 0 0 58.0192 0 129C0 199.981 58.0192 258 129 258Z" fill="url(#paint0_linear_54_3)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_54_3" x1="129" y1="0" x2="129" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#38BDF8"/>
+                    <stop offset="1" stop-color="#4F46E5"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                <span class="text-xl font-bold text-white">MateriaFlux</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#mision" class="hover:text-sky-400 transition-colors">Nuestra Misión</a>
+                <a href="#productos" class="hover:text-sky-400 transition-colors">Productos</a>
+                <a href="#por-que-elegirnos" class="hover:text-sky-400 transition-colors">¿Por qué elegirnos?</a>
+            </nav>
+            <a href="#contacto" class="hidden md:inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                Contacto
+            </a>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="pt-24">
+        <section class="hero-gradient text-center pt-20 pb-28">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                        Filamento 3D que Cuida Nuestra Casa Común
+                    </h1>
+                    <p class="text-lg text-slate-400 mb-8">
+                        En MateriaFlux, transformamos plástico reciclado en filamento de alta calidad. Inspirados en valores de sostenibilidad y respeto por la creación, ofrecemos productos que impulsan tu creatividad y protegen nuestro planeta.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#productos" class="bg-sky-500 hover:bg-sky-400 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-lg">
+                            Ver Productos
+                        </a>
+                        <a href="#mision" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-lg">
+                            Saber Más
+                        </a>
+                    </div>
+                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-white">
+                        <div class="flex flex-col items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            <span class="font-semibold">Alta Calidad</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                           <span class="font-semibold">Sostenible</span>
+                        </div>
+                         <div class="flex flex-col items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7.014A8.003 8.003 0 0112 3c1.398 0 2.743.57 3.714 1.514C18.5 6.5 19 9 19 10c2 0 2.657-1.343 2.657-1.343a8 8 0 01-4.001 10.001z"/></svg>
+                           <span class="font-semibold">Innovador</span>
+                        </div>
+                         <div class="flex flex-col items-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                           <span class="font-semibold">Confiable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mision Section -->
+        <section id="mision" class="py-20 section-glow">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manos sosteniendo un brote de planta" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-white mb-4">Nuestra Inspiración Franciscana</h2>
+                        <p class="text-slate-400 mb-4">
+                            Al igual que San Francisco de Asís veía el valor en toda la creación, nosotros vemos el potencial en los materiales desechados. Nuestra misión es el "Cuidado de la Casa Común", aplicando la innovación para transformar el plástico reciclado en herramientas para la creatividad.
+                        </p>
+                        <p class="text-slate-400">
+                            Cada rollo de filamento MateriaFlux es un compromiso con la calidad, la sostenibilidad y un futuro donde la tecnología y la naturaleza coexisten en armonía.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Section -->
+        <section id="productos" class="py-20 bg-slate-900 section-glow">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-white">Nuestros Filamentos</h2>
+                    <p class="text-slate-400 mt-4">Explora nuestra selección de filamentos reciclados, diseñados para una impresión perfecta y un menor impacto ambiental.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover">
+                        <img src="https://images.pexels.com/photos/7970341/pexels-photo-7970341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rollo de filamento PLA rojo" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">PLA Reciclado</h3>
+                            <p class="text-slate-400 mt-2">Versátil, fácil de usar y biodegradable. Perfecto para todo tipo de proyectos, desde prototipos hasta piezas finales.</p>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-semibold text-sky-400">Desde S/ 60.00</span>
+                                <a href="#" class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-500 transition-colors">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover">
+                        <img src="https://images.pexels.com/photos/8432311/pexels-photo-8432311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rollo de filamento PETG azul" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">PETG Reciclado</h3>
+                            <p class="text-slate-400 mt-2">Duradero, resistente y con baja contracción. Ideal para piezas funcionales que requieren mayor tenacidad.</p>
+                             <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-semibold text-sky-400">Desde S/ 75.00</span>
+                                <a href="#" class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-500 transition-colors">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover">
+                        <img src="https://images.pexels.com/photos/7970335/pexels-photo-7970335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rollo de filamento TPU negro flexible" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">TPU Flexible</h3>
+                            <p class="text-slate-400 mt-2">Flexibilidad y resistencia al desgaste. Crea piezas elásticas y duraderas como fundas o componentes flexibles.</p>
+                             <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-semibold text-sky-400">Desde S/ 90.00</span>
+                                <a href="#" class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-500 transition-colors">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Por que elegirnos Section -->
+        <section id="por-que-elegirnos" class="py-20 section-glow">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white">Calidad y Sostenibilidad Garantizadas</h2>
+                    <p class="text-slate-400 mt-4">Combinamos lo mejor de dos mundos: productos de rendimiento profesional con un profundo respeto por nuestro entorno.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Feature -->
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Material Sostenible</h3>
+                            <p class="text-slate-400 mt-2">Nuestros filamentos provienen de plástico reciclado post-consumo, reduciendo el desperdicio y la huella de carbono.</p>
+                        </div>
+                    </div>
+                     <!-- Feature -->
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Impresión Precisa</h3>
+                            <p class="text-slate-400 mt-2">Con un diámetro consistente y enrollado perfecto, evitamos atascos y aseguramos resultados profesionales.</p>
+                        </div>
+                    </div>
+                     <!-- Feature -->
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Variedad de Colores</h3>
+                            <p class="text-slate-400 mt-2">Ofrecemos una gama de colores vibrantes para que tus creaciones cobren vida tal como las imaginaste.</p>
+                        </div>
+                    </div>
+                     <!-- Feature -->
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Precio Competitivo</h3>
+                            <p class="text-slate-400 mt-2">Creemos que la sostenibilidad debe ser accesible. Ofrecemos una excelente relación calidad-precio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center bg-slate-900 p-12 rounded-lg">
+                    <img src="https://i.pravatar.cc/100?u=a042581f4e29026704d" alt="Foto de cliente" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-slate-700">
+                    <p class="text-xl text-slate-300 italic">"El filamento de MateriaFlux es increíble. La calidad de impresión es superior y me siento bien sabiendo que estoy usando un producto reciclado. ¡Es el filamento perfecto para mis proyectos!"</p>
+                    <cite class="block font-semibold text-white mt-6 not-italic">- Ana López, Diseñadora de Productos</cite>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold text-white">MateriaFlux</h3>
+                    <p class="text-slate-400 mt-2">Creación responsable para un mundo mejor.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white">Navegación</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#mision" class="text-slate-400 hover:text-sky-400">Nuestra Misión</a></li>
+                        <li><a href="#productos" class="text-slate-400 hover:text-sky-400">Productos</a></li>
+                        <li><a href="#por-que-elegirnos" class="text-slate-400 hover:text-sky-400">¿Por qué elegirnos?</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white">Suscríbete</h3>
+                    <p class="text-slate-400 mt-2">Recibe noticias, ofertas especiales y novedades sobre nuestros productos.</p>
+                    <form class="mt-4 flex">
+                        <input type="email" placeholder="Introduce tu email..." class="w-full bg-slate-800 text-white rounded-l-md px-4 py-2 border border-slate-700 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <button class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-r-md">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-slate-800 text-center text-slate-500">
+                <p>&copy; 2025 MateriaFlux. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
