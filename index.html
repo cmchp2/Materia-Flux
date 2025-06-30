@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -71,17 +73,17 @@
     </header>
 
     <!-- Hero Section -->
-    <main class="pt-24">
+    <main class="pt-24 overflow-x-hidden">
         <section class="hero-gradient text-center pt-20 pb-28">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight" data-aos="fade-down">
                         Filamento 3D que Cuida Nuestra Casa Común
                     </h1>
-                    <p class="text-lg text-slate-400 mb-8">
+                    <p class="text-lg text-slate-400 mb-8" data-aos="fade-up" data-aos-delay="200">
                         En MateriaFlux, transformamos plástico reciclado en filamento de alta calidad. Inspirados en valores de sostenibilidad y respeto por la creación, ofrecemos productos que impulsan tu creatividad y protegen nuestro planeta.
                     </p>
-                    <div class="flex justify-center space-x-4">
+                    <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="400">
                         <a href="#productos" class="bg-sky-500 hover:bg-sky-400 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-lg">
                             Ver Productos
                         </a>
@@ -89,7 +91,7 @@
                             Saber Más
                         </a>
                     </div>
-                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-white">
+                    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-white" data-aos="zoom-in-up" data-aos-delay="600">
                         <div class="flex flex-col items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                             <span class="font-semibold">Alta Calidad</span>
@@ -115,10 +117,10 @@
         <section id="mision" class="py-20 section-glow">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
+                    <div class="md:w-1/2" data-aos="fade-right">
                         <img src="https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manos sosteniendo un brote de planta" class="rounded-lg shadow-2xl w-full">
                     </div>
-                    <div class="md:w-1/2">
+                    <div class="md:w-1/2" data-aos="fade-left">
                         <h2 class="text-3xl font-bold text-white mb-4">Nuestra Inspiración Franciscana</h2>
                         <p class="text-slate-400 mb-4">
                             Al igual que San Francisco de Asís veía el valor en toda la creación, nosotros vemos el potencial en los materiales desechados. Nuestra misión es el "Cuidado de la Casa Común", aplicando la innovación para transformar el plástico reciclado en herramientas para la creatividad.
@@ -134,13 +136,13 @@
         <!-- Productos Section -->
         <section id="productos" class="py-20 bg-slate-900 section-glow">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
                     <h2 class="text-3xl font-bold text-white">Nuestros Filamentos</h2>
                     <p class="text-slate-400 mt-4">Explora nuestra selección de filamentos reciclados, diseñados para una impresión perfecta y un menor impacto ambiental.</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Producto 1 -->
-                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
                         <img src="https://images.pexels.com/photos/7970341/pexels-photo-7970341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rollo de filamento PLA rojo" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white">PLA Reciclado</h3>
@@ -152,7 +154,7 @@
                         </div>
                     </div>
                     <!-- Producto 2 -->
-                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
                         <img src="https://images.pexels.com/photos/8432311/pexels-photo-8432311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rollo de filamento PETG azul" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white">PETG Reciclado</h3>
@@ -164,7 +166,7 @@
                         </div>
                     </div>
                     <!-- Producto 3 -->
-                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover">
+                    <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 card-hover" data-aos="fade-up" data-aos-delay="300">
                         <img src="https://images.pexels.com/photos/7970335/pexels-photo-7970335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rollo de filamento TPU negro flexible" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-white">TPU Flexible</h3>
@@ -182,13 +184,13 @@
         <!-- Por que elegirnos Section -->
         <section id="por-que-elegirnos" class="py-20 section-glow">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
                     <h2 class="text-3xl font-bold text-white">Calidad y Sostenibilidad Garantizadas</h2>
                     <p class="text-slate-400 mt-4">Combinamos lo mejor de dos mundos: productos de rendimiento profesional con un profundo respeto por nuestro entorno.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <!-- Feature -->
-                    <div class="flex items-start gap-6">
+                    <div class="flex items-start gap-6" data-aos="fade-up">
                         <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Material Sostenible</h3>
@@ -196,7 +198,7 @@
                         </div>
                     </div>
                      <!-- Feature -->
-                    <div class="flex items-start gap-6">
+                    <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Impresión Precisa</h3>
@@ -204,7 +206,7 @@
                         </div>
                     </div>
                      <!-- Feature -->
-                    <div class="flex items-start gap-6">
+                    <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Variedad de Colores</h3>
@@ -212,7 +214,7 @@
                         </div>
                     </div>
                      <!-- Feature -->
-                    <div class="flex items-start gap-6">
+                    <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Precio Competitivo</h3>
@@ -226,7 +228,7 @@
         <!-- Testimonial -->
         <section class="py-20">
             <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center bg-slate-900 p-12 rounded-lg">
+                <div class="max-w-3xl mx-auto text-center bg-slate-900 p-12 rounded-lg" data-aos="zoom-in">
                     <img src="https://i.pravatar.cc/100?u=a042581f4e29026704d" alt="Foto de cliente" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-slate-700">
                     <p class="text-xl text-slate-300 italic">"El filamento de MateriaFlux es increíble. La calidad de impresión es superior y me siento bien sabiendo que estoy usando un producto reciclado. ¡Es el filamento perfecto para mis proyectos!"</p>
                     <cite class="block font-semibold text-white mt-6 not-italic">- Ana López, Diseñadora de Productos</cite>
@@ -268,6 +270,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // Duración de la animación
+        once: false, // La animación se repite al volver a scrollear hacia arriba
+      });
+    </script>
 
 </body>
 </html>
