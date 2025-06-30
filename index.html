@@ -110,7 +110,7 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2" data-aos="fade-right">
-                        <img src="images/principal.jpg" alt="Manos sosteniendo un brote de planta" class="rounded-lg shadow-2xl w-full">
+                        <img src="https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manos sosteniendo un brote de planta" class="rounded-lg shadow-2xl w-full">
                     </div>
                     <div class="md:w-1/2" data-aos="fade-left">
                         <h2 class="text-3xl font-bold text-white mb-4">Nuestra Inspiración Franciscana</h2>
@@ -258,6 +258,7 @@
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-slate-800 text-center text-slate-500">
+                <p class="mb-2">Visitantes: <span id="visitor-count" class="font-bold text-sky-400">0</span></p>
                 <p>&copy; 2025 MateriaFlux. Todos los derechos reservados.</p>
             </div>
         </div>
@@ -269,6 +270,27 @@
       AOS.init({
         duration: 800, // Duración de la animación
         once: false, // La animación se repite al volver a scrollear hacia arriba
+      });
+
+      // Visitor Counter Script
+      window.addEventListener('DOMContentLoaded', () => {
+        const visitorCountSpan = document.getElementById('visitor-count');
+        const storageKey = 'materiaflux_visitor_count';
+
+        let count = localStorage.getItem(storageKey);
+
+        if (count === null) {
+          // Si no hay contador, empieza en 1
+          count = 1;
+        } else {
+          // Si ya existe, lo incrementa
+          count = parseInt(count) + 1;
+        }
+
+        // Guarda el nuevo valor
+        localStorage.setItem(storageKey, count);
+        // Muestra el valor en la página
+        visitorCountSpan.textContent = count;
       });
     </script>
 
