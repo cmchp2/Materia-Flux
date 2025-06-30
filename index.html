@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MateriaFlux - Filamento 3D Sostenible y de Alta Calidad</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Para el desplazamiento suave */
         }
         .hero-gradient {
             background: radial-gradient(ellipse at top, rgba(30, 41, 59, 0.9), #020617), radial-gradient(ellipse at bottom, #020617, #020617);
@@ -36,6 +39,14 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
+        /* Estilos para el botón de "Volver Arriba" */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Oculto por defecto */
+            transition: opacity 0.3s, transform 0.3s;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-300">
@@ -43,11 +54,12 @@
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
+            <a href="#" class="flex items-center space-x-3">
                  <!-- Logo de la marca -->
                 <img src="images/logo.jpg" alt="Logo de MateriaFlux" class="h-10 w-10 rounded-full object-cover">
-                <span class="text-xl font-bold text-white">MATERIAFLUX</span>
-            </div>
+                <span class="text-xl font-bold text-white">MateriaFlux</span>
+            </a>
+            <!-- Menú de escritorio -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#mision" class="hover:text-sky-400 transition-colors">Nuestra Misión</a>
                 <a href="#productos" class="hover:text-sky-400 transition-colors">Productos</a>
@@ -56,11 +68,19 @@
             <a href="#contacto" class="hidden md:inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
                 Contacto
             </a>
-            <button class="md:hidden text-white">
+            <!-- Botón del menú móvil -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
+        </div>
+        <!-- Menú desplegable móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900">
+            <a href="#mision" class="block py-2 px-4 text-sm hover:bg-slate-800">Nuestra Misión</a>
+            <a href="#productos" class="block py-2 px-4 text-sm hover:bg-slate-800">Productos</a>
+            <a href="#por-que-elegirnos" class="block py-2 px-4 text-sm hover:bg-slate-800">¿Por qué elegirnos?</a>
+            <a href="#contacto" class="block py-2 px-4 text-sm hover:bg-slate-800">Contacto</a>
         </div>
     </header>
 
@@ -110,7 +130,7 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2" data-aos="fade-right">
-                        <img src="images/principal.jpg" alt="Manos sosteniendo un brote de planta" class="rounded-lg shadow-2xl w-full">
+                        <img src="https://images.pexels.com/photos/3850526/pexels-photo-3850526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Manos sosteniendo un brote de planta" class="rounded-lg shadow-2xl w-full">
                     </div>
                     <div class="md:w-1/2" data-aos="fade-left">
                         <h2 class="text-3xl font-bold text-white mb-4">Nuestra Inspiración Franciscana</h2>
@@ -183,7 +203,7 @@
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <!-- Feature -->
                     <div class="flex items-start gap-6" data-aos="fade-up">
-                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg></div>
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg transition-transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Material Sostenible</h3>
                             <p class="text-slate-400 mt-2">Nuestros filamentos provienen de plástico reciclado post-consumo, reduciendo el desperdicio y la huella de carbono.</p>
@@ -191,7 +211,7 @@
                     </div>
                      <!-- Feature -->
                     <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg></div>
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg transition-transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Impresión Precisa</h3>
                             <p class="text-slate-400 mt-2">Con un diámetro consistente y enrollado perfecto, evitamos atascos y aseguramos resultados profesionales.</p>
@@ -199,7 +219,7 @@
                     </div>
                      <!-- Feature -->
                     <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg></div>
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg transition-transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Variedad de Colores</h3>
                             <p class="text-slate-400 mt-2">Ofrecemos una gama de colores vibrantes para que tus creaciones cobren vida tal como las imaginaste.</p>
@@ -207,7 +227,7 @@
                     </div>
                      <!-- Feature -->
                     <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div class="flex-shrink-0 bg-slate-800 p-3 rounded-lg transition-transform hover:scale-110"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
                         <div>
                             <h3 class="text-xl font-bold text-white">Precio Competitivo</h3>
                             <p class="text-slate-400 mt-2">Creemos que la sostenibilidad debe ser accesible. Ofrecemos una excelente relación calidad-precio.</p>
@@ -229,6 +249,13 @@
         </section>
 
     </main>
+
+    <!-- Botón Volver Arriba -->
+    <a href="#" id="back-to-top" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold p-3 rounded-full shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </a>
 
     <!-- Footer -->
     <footer id="contacto" class="bg-slate-900 border-t border-slate-800">
@@ -269,28 +296,39 @@
     <script>
       AOS.init({
         duration: 800, // Duración de la animación
-        once: false, // La animación se repite al volver a scrollear hacia arriba
+        once: false, // La animación no se repite al volver a scrollear hacia arriba
       });
 
-      // Visitor Counter Script
+      // Script para menú móvil, contador y botón de volver arriba
       window.addEventListener('DOMContentLoaded', () => {
+        // Lógica del Menú Móvil
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica del Contador de Visitas
         const visitorCountSpan = document.getElementById('visitor-count');
         const storageKey = 'materiaflux_visitor_count';
-
         let count = localStorage.getItem(storageKey);
-
         if (count === null) {
-          // Si no hay contador, empieza en 1
           count = 1;
         } else {
-          // Si ya existe, lo incrementa
           count = parseInt(count) + 1;
         }
-
-        // Guarda el nuevo valor
         localStorage.setItem(storageKey, count);
-        // Muestra el valor en la página
         visitorCountSpan.textContent = count;
+
+        // Lógica del Botón "Volver Arriba"
+        const backToTopButton = document.getElementById('back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
       });
     </script>
 
